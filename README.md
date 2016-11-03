@@ -1,6 +1,6 @@
 # heroes
 
-> A Vue.js project tour of heroes example from Angular
+> A Vue.js joke project for practice!
 
 ## Build Setup
 

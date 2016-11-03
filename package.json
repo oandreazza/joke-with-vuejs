@@ -1,7 +1,7 @@
 {
-  "name": "heroes",
+  "name": "Vue.js-Joke",
   "version": "1.0.0",
-  "description": "A Vue.js project tour of heroes example from Angular",
+  "description": "A simple joke with Vue.js for practice",
   "author": "Mauricio Andreazza <mauricio.webdev@gmail.com>",
   "private": true,
   "scripts": {
