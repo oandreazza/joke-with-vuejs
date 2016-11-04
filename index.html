@@ -15,19 +15,17 @@
       apareci
     </div>
 
-    <ul>
-      <li v-for="todo in todos">
-        {{ todo.text }}
-      </li>
-    </ul>
-
     <p>
       The new task will be: {{taskName}}
     </p>
     <input type="text" v-model="taskName" placeholder="Task" />
     <button v-on:click="newTodo" type="button">New Todo</button>
+    <ul>
+      <todo-item v-for="todo in todos" v-bind:todo="todo"></todo-item>
+    </ul>
 
   </div>
+
   <!-- built files will be auto injected -->
 </body>
 
