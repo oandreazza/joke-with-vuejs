@@ -5,6 +5,7 @@ new Vue({
   el: '#app',
   data: {
     message: 'ola',
+    taskName: '',
     id: 'bindou',
     seen: true,
     todos: [
@@ -16,7 +17,7 @@ new Vue({
   },
   methods: {
     newTodo: function () {
-      this.todos.push({text: 'nova tarefa'})
+      this.todos.push({text: this.taskName})
     }
   }
 })

@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>heroes</title>
-  </head>
-  <body>
-    <div id="app">
-      {{message}}
-      <p v-bind:id="id">Inspect me</p>
 
-      <div v-if="seen">
-        apareci
-      </div>
+<head>
+  <meta charset="utf-8">
+  <title>heroes</title>
+</head>
 
-      <ul>
-          <li v-for="todo in todos">
-              {{ todo.text }}
-          </li>
-      </ul>
+<body>
+  <div id="app">
+    {{message}}
+    <p v-bind:id="id">Inspect me</p>
 
-      <button v-on:click="newTodo" type="button">New Todo</button>
-
+    <div v-if="seen">
+      apareci
     </div>
-    <!-- built files will be auto injected -->
-  </body>
+
+    <ul>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ul>
+
+    <p>
+      The new task will be: {{taskName}}
+    </p>
+    <input type="text" v-model="taskName" placeholder="Task" />
+    <button v-on:click="newTodo" type="button">New Todo</button>
+
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
