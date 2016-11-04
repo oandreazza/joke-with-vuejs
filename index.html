@@ -16,11 +16,11 @@
     </div>
     <a :href="url">Terra</a>
     <p>
-      The new task will be: {{taskName}}
+      The new task will be: 
     </p>
-      <todo-form v-on:save="newTodo" v-on:typing="typing"></todo-form>
+      <todo-form v-on:save="newTodo" :task-name="selectedTask" v-on:typing="typing"></todo-form>
     <ul>
-      <todo-item v-for="todo in todos" :todo="todo"></todo-item>
+      <todo-item v-on:edit="edit" v-for="todo in todos" :todo="todo"></todo-item>
     </ul>
     <p :class="{ active: seen}">
       {{status}}
