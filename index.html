@@ -18,10 +18,9 @@
     <p>
       The new task will be: {{taskName}}
     </p>
-    <input type="text" @keyup.enter="newTodo" v-model="taskName" placeholder="Task" />
-    <button @click="newTodo" type="button">New Todo</button>
+      <todo-form v-on:save="newTodo" v-on:typing="typing"></todo-form>
     <ul>
-      <todo-item v-for="todo in todos" v-bind:todo="todo"></todo-item>
+      <todo-item v-for="todo in todos" :todo="todo"></todo-item>
     </ul>
     <p :class="{ active: seen}">
       {{status}}
