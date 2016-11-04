@@ -12,6 +12,7 @@ new Vue({
     taskName: '',
     id: 'bindou',
     seen: true,
+    url: 'http://www.terra.com.br',
     todos: [
       { text: 'Task1' },
       { text: 'Task2' },
