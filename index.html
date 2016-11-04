@@ -14,12 +14,12 @@
     <div v-if="seen">
       apareci
     </div>
-    <a v-bind:href="url">Terra</a>
+    <a :href="url">Terra</a>
     <p>
       The new task will be: {{taskName}}
     </p>
     <input type="text" v-model="taskName" placeholder="Task" />
-    <button v-on:click="newTodo" type="button">New Todo</button>
+    <button @click="newTodo" type="button">New Todo</button>
     <ul>
       <todo-item v-for="todo in todos" v-bind:todo="todo"></todo-item>
     </ul>
