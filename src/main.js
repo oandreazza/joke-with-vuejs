@@ -8,6 +8,7 @@ Vue.component('todo-item', {
 new Vue({
   el: '#app',
   data: {
+    status: 'Please, enter a new task',
     message: 'ola',
     taskName: '',
     id: 'bindou',
@@ -19,6 +20,11 @@ new Vue({
       { text: 'Task3' },
       { text: 'Task4' }
     ]
+  },
+  watch: {
+    taskName: function () {
+      this.status = 'Typing...'
+    }
   },
   methods: {
     newTodo: function () {
